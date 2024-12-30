@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORM</title>
+<script type="text/javascript">
+function load() {
+	var search = location.search;
+	search = search.replace("?", "");
+	var data  = search.split("=");
+	if(data[0] == "key2") {
+		document.querySelector("form").key.value 
+			= decodeURI(data[1]);			
+	}
+}
+</script>
+</head>
+<body onload="load()">
+	<form action="/input.html" method="post">
+		<input type="text" name="key" value="하하하하" />
+		<br/> 
+		<button type="submit">호출</button>
+	</form>
+</body>
+</html>
