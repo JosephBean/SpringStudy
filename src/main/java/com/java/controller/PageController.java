@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/page")
 @Controller
+@RequestMapping("/page")
 public class PageController {
 	
 	List<String> pages = new ArrayList<>();

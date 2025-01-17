@@ -6,10 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.Cookie;
 
 @Controller
+@RequestMapping("/test")
 public class TestController {
 
 //	@GetMapping("/")
@@ -18,7 +20,7 @@ public class TestController {
 //		return "home";
 //	}
 	
-	@GetMapping("/")
+	@GetMapping("")
 	public String home(@CookieValue(name="b", required = false) Integer a ) {
 		System.out.println(a);
 		return "home";
